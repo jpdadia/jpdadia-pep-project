@@ -83,7 +83,7 @@ public class AccountDAO{
 
     public static boolean accountExist(int accountId){
         try(Connection conn = ConnectionUtil.getConnection()){
-            String sql = "SELECT COIUNT (*) FROM account WHERE account_id = ?";
+            String sql = "SELECT COUNT (*) FROM account WHERE account_id = ?";
 
             PreparedStatement ps = conn.prepareStatement(sql);
 
